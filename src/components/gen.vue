@@ -23,7 +23,9 @@
       <label for="upper">upper case</label>  
     </div>
     <span>length:  {{length}}</span><br>
-    <span>Pattern: {{ pattern }}</span>
+    <span>Pattern: {{ pattern }}</span><br>
+    <span>The highest principle of morality whether personal or political morality, is to maximize the general</span><br>
+    <span>welfare, or the collective happiness, or the overall balance of pleasure over pain; in a pharse maximize utility.</span>
   </div>
 </template>
 
