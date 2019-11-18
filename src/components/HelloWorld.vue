@@ -5,7 +5,16 @@
     <div>
       <h3>Settings</h3>
       <br>
-      <input v-model.number="length" type="number" min="1" max="100" placeholder="length"><br>
+      <vue-slide-bar v-model="length" style="width:500px;margin: 0 auto;"/>
+       <b>{{length}}</b>
+       <div>
+         <button class="button" @click="length--">
+           -
+         </button>
+         <button class="button" @click="length++">
+           +
+         </button>
+       </div>
       <input type="checkbox" id="number" value="number" v-model="pattern">
       <label for="number">number</label>
       <input type="checkbox" id="symbol" value="symbol" v-model="pattern">
@@ -19,10 +28,15 @@
 </template>
 
 <script>
+import VueSlideBar from 'vue-slide-bar'
+
 export default {
   name: 'Random',
   props: {
     msg: String
+  },
+  components:{
+    VueSlideBar
   },
   data : function(){ 
      return {
