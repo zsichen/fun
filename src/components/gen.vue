@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="gen">
     <h1>{{ msg }}</h1>
     <h2 v-on:click="gen">{{ randstr }}</h2>
     <div>
@@ -31,7 +31,7 @@
 import VueSlideBar from 'vue-slide-bar'
 
 export default {
-  name: 'Random',
+  name: 'Gen',
   props: {
     msg: String
   },
