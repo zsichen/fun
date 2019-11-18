@@ -51,13 +51,6 @@ export default {
        }
      }
   },
-  watch: {
-     length: function(o,n) {
-        if(n > 255){
-          this.length = 255
-        }
-     }
-  },
   methods: {
     gen : function() {
        //construct methods into a ring
