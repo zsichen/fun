@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  template: "#switch-button",
+  //template: "#switch-button",
   name: "switch-button",
   model: {
     prop: "isEnabled",
@@ -22,7 +22,7 @@ export default {
     color: {
       type: String,
       required: false,
-      default: "#4D4D4D"
+      default: "#4D4D4D",
     }
   },
   methods: {

@@ -15,15 +15,10 @@
            +
          </button>
        </div>
-      <input type="checkbox" id="number" value="number" v-model="pattern">
-      <label for="number">number</label>
-      <input type="checkbox" id="symbol" value="symbol" v-model="pattern">
-      <label for="symbol">symbol</label>
-      <input type="checkbox" id="upper" value="upper" v-model="pattern">
-      <label for="upper">upper case</label>  
+      <switch-button v-model="pattern.symbol" color="#42b983">symbol</switch-button><br>
+      <switch-button v-model="pattern.upper" color="#4D4D4D">upper</switch-button><br>
+      <switch-button v-model="pattern.number" color="#F53731">number</switch-button><br>
     </div>
-    <span>length:  {{length}}</span><br>
-    <span>Pattern: {{ pattern }}</span><br>
     <span>The highest principle of morality whether personal or political morality, is to maximize the general</span><br>
     <span>welfare, or the collective happiness, or the overall balance of pleasure over pain; in a pharse maximize utility.</span>
   </div>
@@ -31,7 +26,7 @@
 
 <script>
 import VueSlideBar from 'vue-slide-bar'
-import Switch from './switch.vue'
+import SwitchButton from './switch.vue'
 
 export default {
   name: 'Gen',
@@ -40,13 +35,17 @@ export default {
   },
   components:{
     VueSlideBar,
-    Switch
+    SwitchButton
   },
   data : function(){ 
      return {
        randstr:"click me!",
        length: 16,
-       pattern:[],
+       pattern:{
+         symbol: false,
+         upper: false,
+         number: false
+       },
        pmap: {
          "lower":RandomFactory('a'.charCodeAt(0),'z'.charCodeAt(0)),
          "upper":RandomFactory('A'.charCodeAt(0),'Z'.charCodeAt(0)),
@@ -60,12 +59,13 @@ export default {
        //construct methods into a ring
        let tail = new Node(this.pmap["lower"])
        let head = tail
-       for(let i=0;i<this.pattern.length;i++) {
-          tail.next = new Node(this.pmap[this.pattern[i]])
-          tail = tail.next
+       for(let k in this.pattern) {
+          if(this.pattern[k]) {
+            tail.next = new Node(this.pmap[k])
+            tail = tail.next
+          }
        }
        tail.next = head
-
        this.randstr = ""
        for(let i=this.length;i>0;i--) {
            this.randstr += String.fromCharCode(head.element())
