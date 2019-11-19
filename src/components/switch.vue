@@ -51,10 +51,11 @@ export default {
 
 // For switch-button styling
 .switch-button-control {
-  display: flex;
+  //display: flex;
+  display: table;
   flex-direction: row;
   align-items: center;
-  
+  margin: 0 auto;
   .switch-button {
     $switch-button-height: 1.6em;
     $switch-button-color: var(--color);

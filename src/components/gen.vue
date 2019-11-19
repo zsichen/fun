@@ -15,9 +15,11 @@
            +
          </button>
        </div>
-      <switch-button v-model="pattern.symbol" color="#42b983">symbol</switch-button><br>
-      <switch-button v-model="pattern.upper" color="#4D4D4D">upper</switch-button><br>
-      <switch-button v-model="pattern.number" color="#F53731">number</switch-button><br>
+       <br>
+      <switch-button v-model="pattern.symbol" color="#42b983">symbol</switch-button>
+      <switch-button v-model="pattern.upper" color="#4D4D4D">upper</switch-button>
+      <switch-button v-model="pattern.number" color="#F53731">number</switch-button>
+      <br>
     </div>
     <span>The highest principle of morality whether personal or political morality, is to maximize the general</span><br>
     <span>welfare, or the collective happiness, or the overall balance of pleasure over pain; in a pharse maximize utility.</span>
