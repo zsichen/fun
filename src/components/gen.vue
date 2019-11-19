@@ -31,6 +31,7 @@
 
 <script>
 import VueSlideBar from 'vue-slide-bar'
+import Switch from './switch.vue'
 
 export default {
   name: 'Gen',
@@ -38,7 +39,8 @@ export default {
     msg: String
   },
   components:{
-    VueSlideBar
+    VueSlideBar,
+    Switch
   },
   data : function(){ 
      return {

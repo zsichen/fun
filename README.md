@@ -1,4 +1,5 @@
-# hello
+# fun
+[![Build Status](https://travis-ci.com/zsichen/fun.svg?branch=master)](https://travis-ci.com/zsichen/fun)
 
 ## Project setup
 ```
